@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		body{
+			background-color:#F4EDE5;
+			margin:0;
+		}
+		div{
+			width:100px;
+			height:100px;
+			position:absolute;
+			top:25%;
+			left:50%;
+		}
+		span{
+			width:40%
+			height:40%
+			position:absolute;
+			border-radius:50%;
+			display:block;
+			box-shadow:2px 2px 3px rgba(0,0,0,.4);
+			animation:up 2s infinite ease-in-out;
+		}
+		.one {
+			background: #F3B222;
+			animation-delay: 1.5s;
+		}
+		.two {
+			background: #F0653E;
+			animation-delay: 1s;
+		}
+		.three {
+			background: #B9C0C0;
+			animation-delay: 0.5s;
+		}
+		.four {
+			background: #8F7473;
+		}
+		@keyframes run {
+		0% {transform: translate(0%);border-radius: 50%;}
+		25% {transform: translate(150%) scale(0.5); border-radius: 0%;}
+		50% {transform: translate(150%, 150%);border-radius: 50%; }
+		75% {transform: translate(0%, 150%) scale(0.5); border-radius: 0%;}
+		}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<span class="one"></span>
+			<span class="two"></span>
+			<span class="three"></span>
+			<span class="four"></span>
+		</div>
+	</body>
+</html>

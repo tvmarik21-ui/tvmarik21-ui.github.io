@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="calc" class="card">
+        <h2>Калькулятор (4 дії)</h2>
+
+        <div class="calc-box">
+            <form oninput="res.value =
+                (operation.value === 'add' ? (+a.value + +b.value) :
+                operation.value === 'sub' ? (+a.value - +b.value) :
+                operation.value === 'mul' ? (+a.value * +b.value) :
+                (+b.value === 0 ? '∞' : (+a.value / +b.value)))">
+
+                <label>Перше число:</label>
+                <input type="number" id="a" value="0">
+
+                <label>Друге число:</label>
+                <input type="number" id="b" value="0">
+
+                <label>Операція:</label>
+                <select id="operation">
+                    <option value="add">Додавання (+)</option>
+                    <option value="sub">Віднімання (-)</option>
+                    <option value="mul">Множення (×)</option>
+                    <option value="div">Ділення (÷)</option>
+                </select>
+
+                <label>Результат:</label>
+                <output name="res">0</output>
+            </form>
+        </div>
+    </div>
+	</body>
+</html>
